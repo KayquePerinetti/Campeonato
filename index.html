@@ -130,15 +130,15 @@ div{
 <table id="tabela">
 <thead>
 <tr>
-<th>Posição</th>
-<th>Nome</th>
-<th>Pontos</th>
-<th>Jogos</th>
-<th>Vitórias</th>
-<th>Empates</th>
-<th>Derrotas</th>
-<th>Data Nasc.</th>
-<th>Idade</th>
+    <th>Posição</th>
+    <th>Nome</th>
+    <th>Pontos</th>
+    <th>Jogos</th>
+    <th>Vitórias</th>
+    <th>Empates</th>
+    <th>Derrotas</th>
+    <th>Data Nasc.</th>
+    <th>Idade</th>
 </tr>
 </thead>
 
@@ -148,7 +148,7 @@ div{
 
 <div class="rodape">
 Última atualização:
-<small>16/06/2026 às 07:13</small>
+<small>16/06/2026 às 07:34</small>
 </div>
 
 </div>
@@ -355,9 +355,12 @@ function carregarTabela(){
 
 jogadores.forEach(j => {
 
-j.pontos = (j.vitorias * 3) + j.empates;
-j.jogos = j.vitorias + j.empates + j.derrotas;
-j.idade = calcularIdade(j.nascimento);
+    j.pontos = (j.vitorias * 3) + j.empates;
+
+    // Jogos calculados automaticamente
+    j.jogos = j.vitorias + j.empates + j.derrotas;
+
+    j.idade = calcularIdade(j.nascimento);
 
 });
 
@@ -379,15 +382,15 @@ classe = "rebaixado";
 
 tbody.innerHTML += `
 <tr class="${classe}">
-<td>${index+1}</td>
-<td>${j.nome}</td>
-<td>${j.pontos}</td>
-<td>${j.jogos}</td>
-<td>${j.vitorias}</td>
-<td>${j.empates}</td>
-<td>${j.derrotas}</td>
-<td>${j.nascimento}</td>
-<td>${j.idade}</td>
+    <td>${index+1}</td>
+    <td>${j.nome}</td>
+    <td>${j.pontos}</td>
+    <td>${j.jogos}</td>
+    <td>${j.vitorias}</td>
+    <td>${j.empates}</td>
+    <td>${j.derrotas}</td>
+    <td>${j.nascimento}</td>
+    <td>${j.idade}</td>
 </tr>
 `;
 
@@ -412,15 +415,15 @@ const linhas = [];
 jogadores.forEach((j,index)=>{
 
 linhas.push([
-index+1,
-j.nome,
-j.pontos,
-j.jogos,
-j.vitorias,
-j.empates,
-j.derrotas,
-j.nascimento,
-j.idade
+    index+1,
+    j.nome,
+    j.pontos,
+    j.jogos,
+    j.vitorias,
+    j.empates,
+    j.derrotas,
+    j.nascimento,
+    j.idade
 ]);
 
 });
@@ -430,15 +433,15 @@ doc.autoTable({
 startY:35,
 
 head:[[
-"Posição",
-"Nome",
-"Pontos",
-"Jogos",
-"Vitórias",
-"Empates",
-"Derrotas",
-"Nascimento",
-"Idade"
+    "Posição",
+    "Nome",
+    "Pontos",
+    "Jogos",
+    "Vitórias",
+    "Empates",
+    "Derrotas",
+    "Nascimento",
+    "Idade"
 ]],
 
 body:linhas,
