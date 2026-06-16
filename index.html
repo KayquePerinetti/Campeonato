@@ -35,6 +35,10 @@ h1{
 }
 
 table{
+    -webkit-user-select: none; /* Safari / Chrome */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer / Edge */
+    user-select: none;
     width:100%;
     border-collapse:collapse;
     background:white;
@@ -83,6 +87,10 @@ button:hover{
 }
 
 .rodape{
+    -webkit-user-select: none; /* Safari / Chrome */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer / Edge */
+    user-select: none;
     margin-top:20px;
     text-align:center;
     font-weight:bold;
@@ -108,6 +116,18 @@ div{
 .logo{
     display: flex;
     justify-content: center;
+}
+small{
+    -webkit-user-select: none; /* Safari / Chrome */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer / Edge */
+    user-select: none;
+    pointer-events: none;
+    margin-top: 100%;
+    margin-bottom: 0%;
+    display: grid;
+    justify-content: center;
+    color: gray;
 }
 </style>
 </head>
@@ -147,10 +167,10 @@ div{
 </table>
 
 <div class="rodape">
-Última atualização:
-<small>16/06/2026 às 07:34</small>
-</div>
+Última atualização: 16/06/2026 às 10:32.
 
+</div>
+<small>Kayque Perinetti Cardoso &reg;</small>
 </div>
 
 <script>
